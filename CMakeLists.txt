@@ -396,6 +396,10 @@ CHECK_CXX_COMPILER_FLAG("-Wunused-const-variable" CXX_UNUSED_CONST_VAR)
 if (CXX_UNUSED_CONST_VAR)
     set(EXTRA_CXX_FLAGS "${EXTRA_CXX_FLAGS} -Wno-unused-const-variable")
 endif()
+CHECK_CXX_COMPILER_FLAG("-Wunused-variable" CXX_UNUSED_VAR)
+if (CXX_UNUSED_VAR)
+    set(EXTRA_CXX_FLAGS "${EXTRA_CXX_FLAGS} -Wno-unused-variable")
+endif()
 
 # clang-14 complains about unused-but-set variable.
 CHECK_CXX_COMPILER_FLAG("-Wunused-but-set-variable" CXX_UNUSED_BUT_SET_VAR)
